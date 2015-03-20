@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hrbrmstr/adobecolor.svg)](https://travis-ci.org/hrbrmstr/adobecolor)
+
 adobecolor is a package to read (and eventually write) Adobe color (ASE/ACO) files
 
 In *Envisioning Information*, Edward Tufte says *"…avoiding catastrophe becomes the first principle in bringing color to information: Above all, do no harm."* R users gain a quick upper hand in adhering to this "do no harm" thanks to sane defaults in `ggplot2` and packages like [ggthemes](http://cran.r-project.org/web/packages/ggthemes/index.html) and [RColorBrewer](http://cran.r-project.org/web/packages/RColorBrewer/index.html) that enable use of established, good color palettes.
@@ -177,7 +179,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Fri Mar 20 10:02:33 2015"
+    ## [1] "Fri Mar 20 10:10:32 2015"
 
 ``` r
 test_dir("tests/")

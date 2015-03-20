@@ -7,6 +7,8 @@ output:
     variant: markdown_github
 ---
 
+[![Build Status](https://travis-ci.org/hrbrmstr/adobecolor.svg)](https://travis-ci.org/hrbrmstr/adobecolor)
+
 adobecolor is a package to read (and eventually write) Adobe color (ASE/ACO) files
 
 In _Envisioning Information_, Edward Tufte says _"&hellip;avoiding catastrophe becomes the first
