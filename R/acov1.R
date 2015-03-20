@@ -27,9 +27,10 @@ decode_aco_v1 <- function(aco, n_colors) {
     } else if (colorspace == 2) { # CMYK
       color <- cmyk((100-w/655.35), (100-x/655.35), (100-y/655.35), (100-z/655.35))
     } else if (colorspace == 7) { # Lab
-      message("Lab")
+      message("Lab not supported yet")
       color <- NA
     } else if (colorspace == 8) { # Grayscale
+      message("Greyscale not supported yet")
       color <- w/39.0625
     } else if (colorspace == 9) { # Wide CMYK
       color <- cmyk(w/100, x/100, y/100, z/100)

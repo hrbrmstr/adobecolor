@@ -18,13 +18,14 @@ The following functions are implemented:
 
 ### TODO
 
--   Grayscale & LAB support (just need to find or gen LAB/Grayscale ASE/ACO files, if you have a few please hook me up)
--   ACO v2 support (ASE was more important; this shouldn't take long)
+-   Grayscale support (just need to find or gen Grayscale ASE/ACO files, if you have a few please hook me up)
+-   LAB support (could use some help with this)
 -   Writing out ACO or ASE files (not sure this is needed, tho)
 
 ### News
 
 -   Version `0.1` released
+-   Version `0.2` released : ACO v2 support
 
 ### Installation
 
@@ -45,7 +46,7 @@ library(adobecolor)
 packageVersion("adobecolor")
 ```
 
-    ## [1] '0.1'
+    ## [1] '0.2'
 
 One good source for palettes is the ["Most Popular" section](https://color.adobe.com/explore/most-popular/?time=all) on Adobe Color CC. If you use the Adobe ecosystem, you can sync ASE palette files directly locally or download them directly (registration required).
 
@@ -179,7 +180,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Fri Mar 20 10:10:32 2015"
+    ## [1] "Fri Mar 20 18:20:33 2015"
 
 ``` r
 test_dir("tests/")

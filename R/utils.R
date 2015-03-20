@@ -33,9 +33,47 @@ b2f <- function(four_bytes) {
 is_url <-function(x) { grepl("www.|http:|https:", x) }
 
 #' @useDynLib adobecolor r_floatraw2numeric
-#' @export
 floatraw2numeric <- function(x) {
   stopifnot(is.raw(x))
   stopifnot(length(x) >= 4)
   .Call(r_floatraw2numeric, x)
 }
+
+# #' @export
+# lab2rgb <- function(L, A, B) {
+#
+#   R <- G <- B <- 0
+#
+#   vY <- (L + 16.0) / 116.0
+#   vX <- (A / 500.0) + vY
+#   vZ <- vY - (B / 200.0)
+#
+#   if (vY^3 > 0.008856) { vY <- vY^3 } else { vY <- ( vY - 16.0 / 116.0 ) / 7.787 }
+#   if (vX^3 > 0.008856) { vX <- vX^3 } else { vX <- ( vX - 16.0 / 116.0 ) / 7.787 }
+#   if (vZ^3 > 0.008856) { vZ <- vZ^3 } else { vZ <- ( vZ - 16.0 / 116.0 ) / 7.787 }
+#
+#   X <-  95.047 * vX
+#   Y <- 100.000 * vY
+#   Z <- 108.883 * vZ
+#
+#   vX <- X / 100.0
+#   vY <- Y / 100.0
+#   vZ <- Z / 100.0
+#
+#   vR <- (vX *  3.2406) + (vY * -1.5372) + (vZ * -0.4986)
+#   vG <- (vX * -0.9689) + (vY *  1.8758) + (vZ *  0.0415)
+#   vB <- (vX *  0.0557) + (vY * -0.2040) + (vZ *  1.0570)
+#
+#   if (vR > 0.0031308) { vR <- (1.055 * vR^(1/2.4)) - 0.55 } else { vR <- 12.92 * vR }
+#   if (vG > 0.0031308) { vG <- (1.055 * vG^(1/2.4)) - 0.55 } else { vG <- 12.92 * vG }
+#   if (vB > 0.0031308) { vB <- (1.055 * vB^(1/2.4)) - 0.55 } else { vB <- 12.92 * vB }
+#
+#   message(vR, " ", vG, " ", vB)
+#
+#   return(rgb(abs(vR), abs(vG), abs(vB)))
+# #
+# #   R <- vR * 255.0
+# #   G <- vG * 255.0
+# #   B <- vB * 255.0
+#
+# }

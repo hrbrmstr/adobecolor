@@ -8,7 +8,8 @@
 #' @param .verbose show extra information about ACO file processing#' @export
 #' @note When using named color palettes in a \code{ggplot2} \code{scale_} context, you
 #'     must \code{unname} them or set \code{use_names} to \code{FALSE}.
-#'     Not sure if this is a bug or a deliberate feature in ggplot2.
+#'     Not sure if this is a bug or a deliberate feature in ggplot2. Also, Neither Lab nor
+#'     greyscale colors are supported.
 #' @export
 #' @examples \dontrun{
 #' # built in palette
@@ -22,7 +23,7 @@
 #' print(tomorrow_night)
 #' show_palette(tomorrow_night)
 #' }
-read_aco <- function(path, use_names=TRUE, .verbose=FALSE) {
+read_aco <- function(path, use_names=TRUE, .verbose=TRUE) {
 
   if (is_url(path)) {
     tf <- tempfile()
@@ -37,21 +38,21 @@ read_aco <- function(path, use_names=TRUE, .verbose=FALSE) {
   n_colors <- unpack("v", aco[4:3])[[1]]
 
   if (.verbose) {
-    message("Version: ", version)
+    message("ACO Version: ", version)
     message("# Colors: " , n_colors)
   }
 
+  pal <- NULL
+
   if (version == 1) {
-
     pal <- decode_aco_v1(aco, n_colors)
-
-    if (!use_names) { pal <- unname(pal) }
-    pal
-
   } else {
-    message("ACO v2 not supported yet")
-    return(NULL)
+    pal <- decode_aco_v2(aco, n_colors)
   }
+
+  if (!use_names) { pal <- unname(pal) }
+
+  pal
 
 }
 
@@ -65,7 +66,8 @@ read_aco <- function(path, use_names=TRUE, .verbose=FALSE) {
 #' @param .verbose show extra information about ASE file processing
 #' @note When using named color palettes in a \code{ggplot2} \code{scale_} context, you
 #'     must \code{unname} them or set \code{use_names} to \code{FALSE}.
-#'     Not sure if this is a bug or a deliberate feature in ggplot2.
+#'     Not sure if this is a bug or a deliberate feature in ggplot2. Also, Neither Lab nor
+#'     greyscale colors are supported.
 #' @export
 #' @examples \dontrun{
 #' # built in palette

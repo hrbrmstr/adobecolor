@@ -1,7 +1,7 @@
 ---
 title: "README"
 author: "Bob Rudis"
-date: March 19, 2015
+date: March 20, 2015
 output:
   md_document:
     variant: markdown_github
@@ -37,13 +37,14 @@ The following functions are implemented:
 
 ### TODO
 
-- Grayscale & LAB support (just need to find or gen LAB/Grayscale ASE/ACO files, if you have a few please hook me up)
-- ACO v2 support (ASE was more important; this shouldn't take long)
+- Grayscale support (just need to find or gen Grayscale ASE/ACO files, if you have a few please hook me up)
+- LAB support (could use some help with this)
 - Writing out ACO or ASE files (not sure this is needed, tho)
 
 ### News
 
 - Version `0.1` released
+- Version `0.2` released : ACO v2 support
 
 ### Installation
 
