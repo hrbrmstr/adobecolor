@@ -1,0 +1,50 @@
+---
+title: "README"
+author: "Bob Rudis"
+date: March 18, 2015
+output:
+  md_document:
+    variant: markdown_github
+---
+
+adobecolor is ...
+
+The following functions are implemented:
+
+The following data sets are included:
+
+### News
+
+- Version  released
+
+### Installation
+
+```{r eval=FALSE}
+devtools::install_github("hrbrmstr/adobecolor")
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+options(width=120)
+```
+
+### Usage
+
+```{r}
+library(adobecolor)
+
+# current verison
+packageVersion("adobecolor")
+
+```
+
+### Test Results
+
+```{r}
+library(adobecolor)
+library(testthat)
+
+date()
+
+test_dir("tests/")
+```
+
