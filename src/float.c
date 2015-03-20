@@ -6,9 +6,7 @@
 
 #define USE_RINTERNALS
 #include <R.h>
-//#include <Rdefines.h>
 #include <Rinternals.h>
-//#include <R_ext/RS.h>
 
 /* Float utils */
 
@@ -55,6 +53,5 @@ SEXP r_floatraw2numeric(SEXP x) {
 
   UNPROTECT(1);
   return ans;
-
 }
 

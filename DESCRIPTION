@@ -2,10 +2,10 @@ Package: adobecolor
 Type: Package
 Title: A package to read (and eventually write) Adobe color swatch files (.aco / .ase)
 Version: 0.1
-Date: 2015-03-18
+Date: 2015-03-19
 Author: Bob Rudis (@hrbrmstr)
 Maintainer: Bob Rudis <bob@rudis.net>
-Description: A package to read (and eventually write) Adobe color swatch files (.aco / .ase)
+Description: A package to read (and eventually write) Adobe color swatch files (.aco / .ase). Omega Nebula palette CC-BY-SA davidgav
 URL: http://github.com/hrbrmstr/adobecolor
 BugReports: https://github.com/hrbrmstr/adobecolor/issues
 License: MIT + file LICENSE

@@ -28,7 +28,6 @@ b2li <- function(four_bytes) {
 
 b2f <- function(four_bytes) {
   floatraw2numeric(four_bytes[c(4,3,2,1)])
-  # unpack("f", four_bytes[c(4,3,2,1)])
 }
 
 is_url <-function(x) { grepl("www.|http:|https:", x) }
