@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/hrbrmstr/adobecolor.svg)](https://travis-ci.org/hrbrmstr/adobecolor)
 
+## THIS PROJECT HAS MOVED over to http://github.com/hrbrmstr/swatches since it was unlikely it'd get into CRAN with this name
+
+-----------
+
 adobecolor is a package to read (and eventually write) Adobe color (ASE/ACO) files
 
 In *Envisioning Information*, Edward Tufte says *"…avoiding catastrophe becomes the first principle in bringing color to information: Above all, do no harm."* R users gain a quick upper hand in adhering to this "do no harm" thanks to sane defaults in `ggplot2` and packages like [ggthemes](http://cran.r-project.org/web/packages/ggthemes/index.html) and [RColorBrewer](http://cran.r-project.org/web/packages/RColorBrewer/index.html) that enable use of established, good color palettes.
