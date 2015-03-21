@@ -23,7 +23,7 @@
 #' print(tomorrow_night)
 #' show_palette(tomorrow_night)
 #' }
-read_aco <- function(path, use_names=TRUE, .verbose=TRUE) {
+read_aco <- function(path, use_names=TRUE, .verbose=FALSE) {
 
   if (is_url(path)) {
     tf <- tempfile()
